@@ -1,121 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NatureGlow Therapy - Pro-Xylane Eye Cream</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatureGlow Therapy – Pro-Xylane Eye Cream</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffeef3;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffafc;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #fbe8f0;
+      background: linear-gradient(to right, #ffdde1, #fbd0e6);
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
     header h1 {
-      font-size: 2rem;
-      color: #6d2177;
+      font-size: 2.5rem;
+      color: #7a1c61;
+      margin-bottom: 1rem;
     }
-    .tagline {
-      font-size: 1.1rem;
+    header p {
+      font-size: 1.2rem;
       color: #444;
     }
     .hero {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
     .hero h2 {
-      color: #6d2177;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      color: #c2185b;
     }
-    .benefits, .testimonials, .offer, form {
+    .hero p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #c2185b;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    .benefits, .reviews, .offer, .trust, form {
       background: #fff;
+      margin: 2rem 1rem;
       padding: 1.5rem;
-      margin: 1rem;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .benefits h3, .reviews h3, .offer h3, .trust h3, form h3 {
+      color: #7a1c61;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
     .benefits ul {
       list-style: none;
       padding-left: 0;
     }
     .benefits li::before {
-      content: \"✓ \";
-      color: #6d2177;
+      content: "✔ ";
+      color: #c2185b;
+      font-weight: bold;
     }
-    .testimonial {
+    .benefits li {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .reviews blockquote {
       font-style: italic;
       margin-bottom: 1rem;
     }
-    .cta {
+    .countdown {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #d32f2f;
       text-align: center;
-      margin: 1.5rem;
-    }
-    .cta a {
-      background-color: #6d2177;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
     }
     form input, form select, form button {
       width: 100%;
-      margin-bottom: 1rem;
       padding: 0.8rem;
-      border-radius: 6px;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
     }
     form button {
-      background: #6d2177;
+      background: #7a1c61;
       color: white;
-      font-weight: bold;
       border: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
+  <script>
+    function startCountdown() {
+      const end = new Date();
+      end.setHours(end.getHours() + 2);
+      const timer = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = end - now;
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML = "Offer expired!";
+        } else {
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById("countdown").innerHTML = `⏳ Hurry! Offer ends in ${hours}h ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
 </head>
 <body>
   <header>
     <h1>NatureGlow Therapy</h1>
-    <p class="tagline">Restore your Glow, Relieve the Pain</p>
+    <p>✨ Restore Your Glow. Relieve the Pain. ✨</p>
   </header>
 
   <section class="hero">
-    <h2>Say Goodbye to Eye Bags & Wrinkles!</h2>
-    <p>Look Younger, Fresher, and More Beautiful with Pro-Xylane Active Eye Cream</p>
+    <h2>💖 Restore Youthful Eyes in Just 7 Days</h2>
+    <p>Say goodbye to eye bags, fine lines, and dark circles — with the Pro-Xylane Active Eye Cream trusted by 1,000+ Nigerian women.</p>
+    <a class="cta-button" href="https://wa.me/2348053533921?text=Hi%20NatureGlow!%20I'm%20interested%20in%20ordering%20the%20Pro-Xylane%20Eye%20Cream.%20Please%20assist%20me.%20Thanks!">SHOP NOW</a>
   </section>
 
   <section class="benefits">
-    <h3>Benefits:</h3>
+    <h3>Why Women Love It ❤️</h3>
     <ul>
-      <li>Instantly reduces the appearance of eye bags and dark circles</li>
-      <li>Smoothens fine lines and fades wrinkles</li>
-      <li>Rich in anti-aging Pro-Xylane complex</li>
-      <li>Hydrates and tightens the skin</li>
-      <li>Gentle and suitable for all skin types</li>
-      <li>See results in just 7 days!</li>
+      <li>Reduces puffiness in 24 hours</li>
+      <li>Visibly smooths wrinkles in 3–7 days</li>
+      <li>Brightens dark under-eye circles</li>
+      <li>Hydrates & firms delicate eye skin</li>
+      <li>Gentle, dermatologist-tested & plant-based</li>
     </ul>
   </section>
 
-  <section class="testimonials">
-    <h3>What Our Customers Say</h3>
-    <div class="testimonial">“This cream worked like magic. My puffiness and wrinkles started fading in just one week!” — Mrs. Rose U.</div>
-    <div class="testimonial">“I look 10 years younger. People ask what I’m using!” — Chinwe A.</div>
-    <div class="testimonial">“No more eye bags. My skin feels firmer.” — Esther O.</div>
+  <section class="reviews">
+    <h3>Real Women, Real Results</h3>
+    <blockquote>“This made me feel beautiful again. I haven’t looked this fresh in years.” – Chinwe, Abuja</blockquote>
+    <blockquote>“Better than any expensive Korean cream I’ve tried.” – Esther, Enugu</blockquote>
+    <blockquote>“My under-eye bags reduced in just 4 days!” – Mrs. Rose U., Lagos</blockquote>
   </section>
 
   <section class="offer">
-    <h3>💥 Special Offer</h3>
-    <p>1 for ₦18,000 | 2 for ₦24,500 + <strong>FREE DELIVERY</strong></p>
-    <p><em>Offer valid while stock lasts!</em></p>
+    <h3>💥 Limited-Time Offer</h3>
+    <div id="countdown" class="countdown"></div>
+    <p style="text-align:center; font-size:1.1rem;">
+      1 Tube for ₦18,000<br>
+      2 for ₦24,500 + <strong>FREE Delivery Nationwide</strong>
+    </p>
   </section>
 
-  <section class="cta">
-    <a href="https://wa.me/2348053533921">Chat on WhatsApp</a>
-    <p>📞 Call: 08053533921 | ✉️ Email: support@yourbrand.com</p>
+  <section class="trust">
+    <h3>What Makes Us Different</h3>
+    <ul>
+      <li>✅ Made from natural plant extracts</li>
+      <li>✅ Dermatologist-tested</li>
+      <li>✅ No side effects</li>
+      <li>✅ Money-back guarantee if no result in 7 days</li>
+    </ul>
   </section>
 
   <form>
@@ -134,5 +192,9 @@
     </select>
     <button type="submit">Submit Order</button>
   </form>
+
+  <footer>
+    &copy; 2025 NatureGlow Therapy. All rights reserved.
+  </footer>
 </body>
 </html>
